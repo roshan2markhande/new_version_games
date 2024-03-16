@@ -19,11 +19,12 @@ import { ProfileComponent } from './Components/profile/profile.component';
 import { EditProfileComponent } from './Components/edit-profile/edit-profile.component';
 import { ChangePasswordComponent } from './Components/change-password/change-password.component';
 import { ForgetPasswordComponent } from './Components/forget-password/forget-password.component';
+import { UserTableComponent } from './Components/user-table/user-table.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,LoginPageComponent,RouterLink,HelpBtComponent,FratureComponent,HomeComponent,ArticleComponent,
+  imports: [CommonModule, RouterOutlet,LoginPageComponent,RouterLink,HelpBtComponent,FratureComponent,HomeComponent,ArticleComponent,UserTableComponent,
     SideBarComponent,FootersComponent,NgIf,NgFor,NgSwitch,NgClass,ForgetPasswordComponent,ChangePasswordComponent,EditProfileComponent,ProfileComponent,
     SingUpComponent,MsgBoxComponent,NgOptimizedImage,MatIconModule,GamePageComponent],
   templateUrl: './app.component.html',

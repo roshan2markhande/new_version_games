@@ -11,7 +11,6 @@ exports.register=async (req,res)=>{
         Ans:req_body.ans,
         gender:req_body.gender
     }
-    console.log('hi')
     const registerObj=await userModel.create(userObj)
     try {
         console.log(registerObj)

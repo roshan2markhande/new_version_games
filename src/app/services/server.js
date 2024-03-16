@@ -22,6 +22,7 @@ db.once('open',()=>{
   console.log("server connected sucessfully");
 })
 require("../routes/register.route")(app) //Strich
+require ("../routes/getUserData.route")(app) // Sttich
 
 app.listen(serverConfig.PORT, () => {
   console.log("Server Started on port num:", serverConfig.PORT);

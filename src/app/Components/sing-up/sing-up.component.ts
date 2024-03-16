@@ -23,7 +23,6 @@ export class SingUpComponent {
   onSubmit() {
   this.http.post('http://127.0.0.1:8080/register',this.user).subscribe((user:any)=>{
       console.log('User submitted:', this.user);
-      alert('User register Sucessfully')
      });
    }
   } 
