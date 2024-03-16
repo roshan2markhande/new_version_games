@@ -1,0 +1,83 @@
+<div class="container register">
+    <div class="row">
+        <div class="col-md-3 register-left">
+            <img src="../assets/images/game_one.png" alt="" />
+            <h3>Welcome</h3>
+            <p>You are 30 seconds away from fun !!!!</p>
+            <input type="submit" name="" value="Login" routerLink="/login" /><br />
+        </div>
+        <div class="col-md-9 register-right">
+            <form (ngSubmit)="onSubmit()">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <h3 class="register-heading">Register Your Self As Gamer</h3>
+
+                        <div class="row register-form">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="firstName" placeholder="First Name *"
+                                        name="username" [(ngModel)]="user.firstName" required
+                                        [ngModelOptions]="{standalone: true}" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="lastName" placeholder="Last Name *"
+                                        [(ngModel)]="user.lastName" required [ngModelOptions]="{standalone: true}" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="password" placeholder="Password *"
+                                        [(ngModel)]="user.password" required [ngModelOptions]="{standalone: true}" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Confirm Password *" />
+                                </div>
+                                <div class="form-group">
+                                    <div class="maxl">
+                                        <label class="radio inline">
+                                            <input type="radio" name="gender" id="gender" value="male" checked
+                                                [(ngModel)]="user.gender" required
+                                                [ngModelOptions]="{standalone: true}">
+                                            <span> Male </span>
+                                        </label>
+                                        <label class="radio inline">
+                                            <input type="radio" name="gender1" id="gender" value="female"
+                                                [(ngModel)]="user.gender" required
+                                                [ngModelOptions]="{standalone: true}">
+                                            <span>Female </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email *"
+                                        [(ngModel)]="user.email" required [ngModelOptions]="{standalone: true}" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" minlength="10" maxlength="10" id="mob_no" name="txtEmpPhone"
+                                        class="form-control" placeholder="Your Phone *" [(ngModel)]="user.mob_no"
+                                        required [ngModelOptions]="{standalone: true}" />
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option class="hidden" selected disabled>Please select your Sequrity Question
+                                        </option>
+                                        <option>What is your Birthdate?</option>
+                                        <option>What is Your old Phone Number</option>
+                                        <option>What is your Pet Name?</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="ans" placeholder="Enter Your Answer *"
+                                        [(ngModel)]="user.ans" required [ngModelOptions]="{standalone: true}" />
+                                </div>
+                                <input type="submit" class="btnRegister" value="Register" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</div>

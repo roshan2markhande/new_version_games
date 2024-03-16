@@ -1,0 +1,46 @@
+.help-center-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h2 {
+    color: #333;
+    text-align: center;
+  }
+  
+  .article-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .article-item {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .article-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #007bff;
+    font-size: 20px;
+  }
+  
+  .article-content {
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  .back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
+  }

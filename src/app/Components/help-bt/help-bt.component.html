@@ -1,0 +1,9 @@
+<div class="help-container">
+    <h2>Help Center</h2>
+    <ul>
+      <li *ngFor="let article of articles">
+        <a [routerLink]="['/article', article.id]">{{ article.title }}</a>
+      </li>
+    </ul>
+  </div>
+  <router-outlet></router-outlet>

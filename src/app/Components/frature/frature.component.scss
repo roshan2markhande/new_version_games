@@ -1,0 +1,44 @@
+.upcoming-games-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    color: #333;
+    text-align: center;
+  }
+  
+  .game-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+  }
+  
+  .game-details {
+    flex: 1;
+  }
+  
+  .game-details h3 {
+    margin: 0;
+    color: #007bff;
+    font-size: 20px;
+  }
+  
+  .game-details p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .alert-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  .alert-button:hover {
+    background-color: #0056b3;
+  }

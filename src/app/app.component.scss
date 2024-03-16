@@ -1,0 +1,28 @@
+.navbar-brand {
+    font-weight: bold;
+    white-space: nowrap;
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.myIcon {
+    position:absolute;
+    right: 150px;
+    float: right;
+}
+.myIcon1 {
+    position:absolute;
+    right: 100px;
+    float: right;
+}
+.myIcon2 {
+    position:absolute;
+    right: 50px;
+    float: right;
+}
+.headerlogo{
+    height: 40px !important;
+}
+.navbar a{
+    color: white !important;
+}
