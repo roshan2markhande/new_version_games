@@ -1,40 +1,38 @@
+
 const mongoose=require('mongoose');
 //schema
 const Schema = mongoose.Schema;
-const userSchema = new Schema({
-    Firstname:{
+const gameSchema = new Schema({
+    _id:{
         type:String,
-        required:true
-    },
-    Lastname:{
-        type:String,
-        required:true
-    },
-    Password:{
-        type:String,
-        required:true
-    },
-    Email:{
-        type:String,
-        required:true
-    },
-    Mob_No:{
-        type:Number,
-        required:true
-    },
-    Ans:{
-        type:String,
-        required:true
-    },
-    gender:{
-        type:String,
-        required:true
     },
     User_id:{
         type:String,
+    },
+    title:{
+        type:String,
+        required:true
+    },
+    description:{
+        type:String,
+        required:true
+    },
+    developer:{
+        type:String,
+        required:true
+    },
+    image_url:{
+        type:String,
+        required:true
+    },
+    platforms:{
+        type:String,
+        required:true
+    },
+    genre:{
+        type:String,
         required:true
     }
-    
 },{timestamp:true, versionkey:false})
 //go ahead collecion
-module.exports=mongoose.model('User',userSchema)
+module.exports=mongoose.model('game',gameSchema)

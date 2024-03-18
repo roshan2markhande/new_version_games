@@ -9,7 +9,7 @@ export class ForgetAuthService {
   constructor(private http: HttpClient) {}
 
   forgotPassword(email: string): Observable <any> {
-    return this.http.post<any>('your-api-endpoint/reset-password', { email });
+    return this.http.post<any>('http://127.0.0.1:8080/register/reset-password', { email });
   }
 
 }
