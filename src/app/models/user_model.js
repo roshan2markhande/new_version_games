@@ -16,7 +16,8 @@ const userSchema = new Schema({
     },
     Email:{
         type:String,
-        required:true
+        required:true,
+        unique:true
     },
     Mob_No:{
         type:Number,

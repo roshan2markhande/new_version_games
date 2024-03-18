@@ -3,10 +3,7 @@ const mongoose=require('mongoose');
 //schema
 const Schema = mongoose.Schema;
 const gameSchema = new Schema({
-    _id:{
-        type:String,
-    },
-    User_id:{
+     User_id:{
         type:String,
     },
     title:{

@@ -1,11 +1,7 @@
 //d, sender_id, receiver_id, message, timestam.
 const mongoose=require('mongoose')
 const chatSchema=mongoose.Schema({
-    id:{
-        type:String,
-        required:true,
-    },
-    sender_id:{
+      sender_id:{
         type:String,
         required:true,
     },

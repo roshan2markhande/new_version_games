@@ -1,8 +1,5 @@
 const mongoose=require('mongoose')
 const friendshipSchema=mongoose.Schema({
-_id :{
-    type:String,
-},
 User_id :{
     type:String,
     required:true,
