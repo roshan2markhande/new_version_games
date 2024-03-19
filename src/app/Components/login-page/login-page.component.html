@@ -3,14 +3,16 @@
         <div class="fadeIn.first">
             <img src="assets/images/user-interface.png" id="icon" alt="User icon" class="icon" />
         </div>
-<form>
-    <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-    <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+    <input type="text" id="username" class="fadeIn second" name="login" placeholder="username" [(ngModel)]="credintial.username" required>
+    <input type="text" id="password" class="fadeIn third" name="login" placeholder="password" [(ngModel)]="credintial.password" required>
+</div>
     <input type="submit" class="fadeIn fourth" value="Log In" >
 
 </form>
 <div id="formFooter">
-    <a class="underlineHover" routerLink="/forgetPassword"  href="#">Forgot Password?</a>
+    <a class="underlineHover" routerLink="/forgetPassword">Forgot Password?</a>
 </div>
 </div>
 <!-- <app-msg-box [message]="errorMessage" (close)="clearErrorMessage()"></app-msg-box>  -->

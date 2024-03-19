@@ -39,31 +39,31 @@ exports.getData = async (req, res) => {
 }
 exports.singin = async (req, res) => {
     //check user id presend in the system
-    const user = await userModel.findOne({ userId: req.body.userId });
-
+    var req_body = req.body;
+    console.log(req_body)
+    const user = await userModel.findOne({User_id:req_body.username});
     if (user == null) {
         return res.status(400).send({
             message: "User not presend"
         })
     }
-
 //passward is correct
 //encrypt krega with check karega
-const isPasswardValid = bcrypt.compareSync(req.body.Password, user.password)
+const isPasswardValid = bcrypt.compareSync(req.body.Password,user.Password)
 if (isPasswardValid == false) {
     return res.status(401).send({
         message: "wrong passward"
     })
 }
 //using jwt create access token with ttl and return
-const token = jwt.sign({ id: user.userId }, secret.secret,
+const token = jwt.sign({ id: user.User_id }, secret.secret,
     {
         expiresIn: 120  //time to active
     })
 res.status(200).send({
     name: user.name,
-    userId: user.userId,
-    email: user.email,
+    userId: user.User_id,
+    email: user.Email,
     accessToken: token
 
 })
