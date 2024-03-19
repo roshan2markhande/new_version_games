@@ -22,7 +22,6 @@ export const routes: Routes = [
 {path:"footer",title:'Footer',component:FootersComponent},
 {path:"msg-box",title:'Message',component:MsgBoxComponent},
 {path:"home",title:'Home',component:HomeComponent},
-{ path: '', redirectTo: '/help', pathMatch: 'full' },
 {path:"help_bt",title:'Help',component:HelpBtComponent},
 {path:'article/:id',title:'Help',component:ArticleComponent},
 {path:"frature",title:'Features',component:FratureComponent},

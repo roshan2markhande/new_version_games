@@ -1,4 +1,4 @@
-<form (load)="ngOnInit()">
+<form >
 <table class="table table-sm">
     <thead>
       <tr>
@@ -13,15 +13,15 @@
     </thead>
     <tbody>
       <tr *ngFor="let user of users">
-        <th scope="row">{{user.id}}</th>
-        <td>{{user.firstName}}</td>
-        <td>{{user.lastName}}</td>
+        <th scope="row">{{user.User_id}}</th>
+        <td>{{user.Firstname}}</td>
+        <td>{{user.Lastname}}</td>
         <td>{{user.gender}}</td>
-        <td>{{user.email}}</td>
-        <td>{{user.mob_no}}</td>
-        <td>{{user.and}}</td>
+        <td>{{user.Email}}</td>
+        <td>{{user.Mob_No}}</td>
+        <td>{{user.Ans}}</td>
       </tr>
     </tbody>
   </table>
-  <button (click)="ngOnInit()">Load</button>
+  <button (click)="getData()">Load</button>
 </form>

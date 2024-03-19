@@ -31,9 +31,9 @@ const userSchema = new Schema({
         type:String,
         required:true
     },
+    
     User_id:{
         type:String,
-        required:true
     }
     
 },{timestamp:true, versionkey:false})

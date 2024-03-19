@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
+import { UserDataService } from '../../services/user-data.service';
 
 @Component({
   selector: 'app-user-table',
@@ -10,15 +11,18 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './user-table.component.scss'
 })
 export class UserTableComponent implements OnInit {
-  users: any = {};
+  users: any = [];
 
-constructor(private http:HttpClient) {
+constructor(private dataService:UserDataService) {
 }
   ngOnInit() {
-  this.http.get('http://127.0.0.1:8080/getUserData',this.users).subscribe((user:any)=>{
-    console.log(this.users);
-  });
-}
+   this.getData()
   }
+  getData():void {
+    this.dataService.getData().subscribe(users => {
+      this.users=users;
+    });
+  }
+}
 
     

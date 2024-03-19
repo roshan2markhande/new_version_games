@@ -21,9 +21,14 @@ db.on('error',()=>{
 db.once('open',()=>{
   console.log("server connected sucessfully");
 })
-require("../routes/register.route")(app) //Strich
-require ("../routes/getUserData.route")(app) // Sttich
-
+//Stitch the express app server to route
+require("../routes/register.route")(app) ;
+// require("../routes/chat.route")(app) ;
+// require("../routes/friendship.route")(app) ;
+// require("../routes/game.route")(app) ;
+// require("../routes/player.route")(app) ;
+// require("../routes/transaction.route")(app) ;
+//start the server
 app.listen(serverConfig.PORT, () => {
   console.log("Server Started on port num:", serverConfig.PORT);
 });
