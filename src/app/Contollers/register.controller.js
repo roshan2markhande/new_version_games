@@ -49,7 +49,7 @@ exports.singin = async (req, res) => {
     }
 //passward is correct
 //encrypt krega with check karega
-const isPasswardValid = bcrypt.compareSync(req.body.Password,user.Password)
+const isPasswardValid = bcrypt.compareSync(req_body.password,user.Password);
 if (isPasswardValid == false) {
     return res.status(401).send({
         message: "wrong passward"
@@ -61,7 +61,7 @@ const token = jwt.sign({ id: user.User_id }, secret.secret,
         expiresIn: 120  //time to active
     })
 res.status(200).send({
-    name: user.name,
+    name: user.Firstname,
     userId: user.User_id,
     email: user.Email,
     accessToken: token
