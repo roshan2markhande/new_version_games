@@ -14,6 +14,7 @@ import { EditProfileComponent } from './Components/edit-profile/edit-profile.com
 import { ChangePasswordComponent } from './Components/change-password/change-password.component';
 import { ForgetPasswordComponent } from './Components/forget-password/forget-password.component';
 import { NgModule } from '@angular/core';
+import { GamePageComponent } from './Components/game-page/game-page.component';
 
 export const routes: Routes = [
 {path:'login',title:'Login Page',component:LoginPageComponent},
@@ -25,8 +26,9 @@ export const routes: Routes = [
 {path:"help_bt",title:'Help',component:HelpBtComponent},
 {path:'article/:id',title:'Help',component:ArticleComponent},
 {path:"frature",title:'Features',component:FratureComponent},
-{path:"profile",title:'Features',component:ProfileComponent},
-{path:"editProfile",title:'Features',component:EditProfileComponent},
-{path:"changePassword",title:'Features',component:ChangePasswordComponent},
-{path:"forgetPassword",title:'Features',component:ForgetPasswordComponent},
+{path:"profile",title:'profile',component:ProfileComponent},
+{path:"editProfile",title:'editProfile',component:EditProfileComponent},
+{path:"changePassword",title:'changePassword',component:ChangePasswordComponent},
+{path:"forgetPassword",title:'forgetPassword',component:ForgetPasswordComponent},
+{path:"game",title:'Game Catalog',component:GamePageComponent},
 ]

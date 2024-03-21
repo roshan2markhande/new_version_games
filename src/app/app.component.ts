@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { LoginPageComponent } from './Components/login-page/login-page.component';
 import { SideBarComponent } from './Components/side-bar/side-bar.component';
 import {FootersComponent}  from './Components/footers/footers.component';
@@ -20,6 +20,7 @@ import { EditProfileComponent } from './Components/edit-profile/edit-profile.com
 import { ChangePasswordComponent } from './Components/change-password/change-password.component';
 import { ForgetPasswordComponent } from './Components/forget-password/forget-password.component';
 import { UserTableComponent } from './Components/user-table/user-table.component';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -32,4 +33,24 @@ import { UserTableComponent } from './Components/user-table/user-table.component
 })
 export class AppComponent {
   title = 'Cloud_Gaming';
+  loggedI:boolean=true;
+  constructor(private authService: AuthService, private router: Router) {}
+
+  isLoggedIn(): boolean {
+    // Implement isLoggedIn() method based on your authentication service
+    return this.authService.isLoggedIn();
+  }
+
+  getUsername(): string {
+    // Implement getUsername() method based on your authentication service
+    return this.authService.getUsername();
+  }
+
+  goToProfile(): void {
+    this.router.navigate(['/profile']); // Navigate to profile page
+  }
+
+  signOut(): void {
+    this.authService.logout(); // Call signOut() method from your authentication service
+  }
 }

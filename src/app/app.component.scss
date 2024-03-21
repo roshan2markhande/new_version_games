@@ -26,3 +26,18 @@
 .navbar a{
     color: white !important;
 }
+.username{
+    color: white !important;
+}
+.navbar-icons {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Align items vertically */
+  }
+  
+  .navbar-brand {
+    margin-right: auto; /* Move the brand/logo to the left side */
+  }
+  
+  .navbar-icons mat-icon {
+    margin-left: 10px; /* Adjust spacing between icons */
+  }
