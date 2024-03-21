@@ -32,7 +32,7 @@ verifyPassword(){
   }
   user: any = {}; // This will store form data
   onSubmit() {  
-    this.verifyPassword()
+    this.verifyPassword();
   this.http.post('http://127.0.0.1:8080/register',this.user).subscribe((user:any)=>{
       console.log('User submitted:', this.user);
      });
